@@ -1,0 +1,30 @@
+stages:
+  - build
+  - deploy
+
+build:
+  image: node
+  stage: build
+  script:
+    - apt update -y
+    - apt install npm -y
+    - npm install
+  artifacts:
+    paths:
+      - node_module
+      - package-lock.json
+   # expire_in: 1 week
+
+deploy:
+  image: node
+  stage: deploy
+  script:
+     - apt update -y
+     - apt install nodejs -y
+     - node index.js
+
+# to run a job continusly in the backgound modify the '- node index.js' line to '- node index.js > /dev/null 2>&1 &'
+
+# gitlab uses default ruby image as a docker continer for running jobs.
+
+# So we can use our custom or predefined images from docker repository or private repository for use 'image: node:<version> else use node which defautls to latest version'

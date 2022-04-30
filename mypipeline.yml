@@ -1,0 +1,10 @@
+# pipeline are top-level components of CICD  - Integration, Deployment and Delivery
+
+# Tasks - Pipeline includes - Jobs and Stages
+
+# Jobs defines what to do. Ex. A job to test the code, or to compile the code
+
+# Stages are collection of jobs. It defines the order of jobs.
+
+# Multiple types of pipelines can be build - Basic Pipeline, DAG pipeline (Directed Acyclic Graph), Parent-child pipeline, Multi-project pipelines etc.
+

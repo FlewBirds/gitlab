@@ -1,0 +1,33 @@
+# gitlab will automatically detectect the order.
+stages:
+  - test
+  - build
+  - deploy
+
+# .pre and .post cannot be changed
+# using above order we are able change the order build, test, deploy to test, build, deploy
+
+pre-job:
+  stage: .pre
+  script:
+    - echo 'This message is from .pre-job'
+
+build-job:
+  stage: build
+  script:
+    - echo 'This is build job'
+
+test-job:
+  stage: test
+  script:
+    - echo 'This is test-job'
+
+deploy-job:
+  stage: deploy
+  script:
+    - echo 'Thid is deploy-job'
+
+post-job:
+  stage: .post
+  script:
+    - echo 'This message is from .post-job'

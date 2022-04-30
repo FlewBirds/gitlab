@@ -1,0 +1,11 @@
+build-job:
+  script:
+    - echo 'This is build job'
+
+test-job:
+  script:
+    - echo 'This is test-job'
+
+deploy-job:
+  script:
+    - echo 'Thid is deploy-job'

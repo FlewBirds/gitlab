@@ -1,0 +1,7 @@
+windows-info:
+    tags:
+        - windows
+    scrpit:
+        - systeminfo
+
+# use the shared runners by choosing the tags 

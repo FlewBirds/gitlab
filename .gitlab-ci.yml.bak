@@ -1,0 +1,4 @@
+my-first-pipline:
+   script:
+      - python hello.py
+      

@@ -1,0 +1,32 @@
+# execution order of jobs
+stages:
+  - build
+  - test
+  - deploy
+
+build-job:
+  stage: build
+  script:
+    - echo 'This is build job'
+
+test-job:
+  stage: test
+  script:
+    - echo 'This is test-job'
+
+deploy-job:
+  stage: deploy
+  script:
+    - echo 'Thid is deploy-job'
+
+# jobs in the same stage run in parallel
+
+test-job1:
+  stage: test1
+  script:
+    - echo 'Test job test1 parallel test'
+
+test-job2:
+  stage: test2
+  script:
+    - echo 'Test job test2 parallel test'
